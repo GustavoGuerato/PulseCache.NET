@@ -18,8 +18,4 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PulseCache.Server\PulseCache.Server.csproj" />
-  </ItemGroup>
-
 </Project>

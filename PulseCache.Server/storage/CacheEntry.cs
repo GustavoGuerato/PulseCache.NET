@@ -1,9 +1,8 @@
 using System;
-using System.Collections.Concurrent;
-namespace PulseCache.Server.Storage
-{
-    public class CacheEntry
-    {
-        
-    }
-}
+namespace PulseCache.Server.Storage;
+
+public readonly record struct CacheEntry
+(
+  byte[] Value,
+  DateTime? Expiration
+);

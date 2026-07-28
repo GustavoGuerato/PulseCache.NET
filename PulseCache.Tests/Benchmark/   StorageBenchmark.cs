@@ -1,5 +1,6 @@
 using Xunit;
 using System.Linq;
+using PulseCache.Server.Storage;
 
 namespace PulseCache.Tests;
 
@@ -8,7 +9,6 @@ public class StorageEngineTests
     [Fact]
     public async Task StorageEngine_SetAndGet_ShouldStoreAndRetrieveValue()
     {
-        // Arrange
         var storageEngine = new StorageEngine();
 
         var tasks = Enumerable.Range(0, 100)
@@ -26,10 +26,8 @@ public class StorageEngineTests
 
         for (int i = 0; i < 100; i++)
         {
-            // Act
             var result = storageEngine.GetEntry($"key-{i}");
 
-            // Assert
             Assert.NotNull(result);
         }
     }
